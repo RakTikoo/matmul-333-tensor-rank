@@ -1,0 +1,45 @@
+# Wave 21 (rigor) — OUTCOMES (checkpointed as tests land)
+
+Primes (all NOT in agent set {1000003,1000033,1000037}): 999983 prime=True, 999979 prime=True, 999961 prime=True, 10000019 prime=True, 10000079 prime=True
+
+## laderman: claim nullity_Q = 76
+J built: shape (729, 621), entries in [-1, 0, 1], nnz=2781
+  rank mod 999983: rank=545 nullity=76 (claim 76) OK [0.4s]
+  rank mod 999979: rank=545 nullity=76 (claim 76) OK [0.2s]
+  rank mod 999961: rank=545 nullity=76 (claim 76) OK [0.3s]
+  rank mod 10000019: rank=545 nullity=76 (claim 76) OK [0.3s]
+  rank mod 10000079: rank=545 nullity=76 (claim 76) OK [0.2s]
+  kernel artefact: 76 vectors, each length 621 (claim 76)
+  J.v = 0 exact over Z: 76/76 pass
+  basis rank mod 999983: 76 (expect 76) OK
+  basis rank mod 999979: 76 (expect 76) OK
+  torus dim mod 999983: 46 (expect 46)
+  orbit dim mod 999983: 26 (expect 26)
+  span(torus+orbit) dim: 70 (expect 70)
+  J.v=0 exact: torus: 46/46 pass
+  J.v=0 exact: orbit-corrected: 27/27 pass
+  J.v=0 exact: orbit-naive: 9/27 pass
+  rank(span[trivial + agent kernel]) mod 999983: 76 (expect 76 if trivial subset of kernel)
+  -> genuine moduli = 76 - 70 = 6 (if trivial span is 70 and inside kernel)
+
+## perminov: claim nullity_Q = 94
+J built: shape (729, 621), entries in [-1, 0, 1], nnz=4185
+  rank mod 999983: rank=527 nullity=94 (claim 94) OK [0.7s]
+  rank mod 999979: rank=527 nullity=94 (claim 94) OK [0.6s]
+  rank mod 999961: rank=527 nullity=94 (claim 94) OK [0.4s]
+  rank mod 10000019: rank=527 nullity=94 (claim 94) OK [0.6s]
+  rank mod 10000079: rank=527 nullity=94 (claim 94) OK [0.6s]
+  kernel artefact: 94 vectors, each length 621 (claim 94)
+  J.v = 0 exact over Z: 94/94 pass
+  basis rank mod 999983: 94 (expect 94) OK
+  basis rank mod 999979: 94 (expect 94) OK
+  torus dim mod 999983: 46 (expect 46)
+  orbit dim mod 999983: 26 (expect 26)
+  span(torus+orbit) dim: 70 (expect 70)
+  J.v=0 exact: torus: 46/46 pass
+  J.v=0 exact: orbit-corrected: 27/27 pass
+  J.v=0 exact: orbit-naive: 9/27 pass
+  rank(span[trivial + agent kernel]) mod 999983: 94 (expect 94 if trivial subset of kernel)
+  -> genuine moduli = 94 - 70 = 24 (if trivial span is 70 and inside kernel)
+
+Total wall: 8s

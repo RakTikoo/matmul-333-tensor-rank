@@ -1,0 +1,14 @@
+[
+ {
+  "scheme": "laderman",
+  "nullity_modp": 76,
+  "verified_exact": 76,
+  "rank_verified": 76
+ },
+ {
+  "scheme": "perminov",
+  "nullity_modp": 94,
+  "verified_exact": 94,
+  "rank_verified": 94
+ }
+]
