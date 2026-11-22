@@ -1,0 +1,154 @@
+{
+ "seed": "perminov",
+ "steps": 100459,
+ "rewrite_steps": 0,
+ "distinct_states": 34604,
+ "pair_tests": 25416380,
+ "restarts": 0,
+ "collapsible_found": [],
+ "seed_classic_moves": 26,
+ "seed_general_rewrites": null,
+ "isolated_seed": false,
+ "best_proximity_minors": 1,
+ "best_proximity_pair": [
+  13,
+  18,
+  2
+ ],
+ "best_proximity_state": "569d452f305016a7",
+ "near_pairs_mean": 5.630300617161059,
+ "near_pairs_min": 4,
+ "near_pairs_max": 8,
+ "moves_avail_mean": 19.426691486078898,
+ "novel_drops": [
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s1_term6.json",
+   "term": 6,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 1, \"total_entries\": 729, \"abs_error\": 1.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s1_term13.json",
+   "term": 13,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 1, \"total_entries\": 729, \"abs_error\": 1.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s1_term17.json",
+   "term": 17,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s1_term18.json",
+   "term": 18,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 1, \"total_entries\": 729, \"abs_error\": 1.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s1_term19.json",
+   "term": 19,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s2_term13.json",
+   "term": 13,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 1, \"total_entries\": 729, \"abs_error\": 1.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s2_term17.json",
+   "term": 17,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s2_term18.json",
+   "term": 18,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 1, \"total_entries\": 729, \"abs_error\": 1.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s2_term19.json",
+   "term": 19,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s3_term13.json",
+   "term": 13,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s3_term17.json",
+   "term": 17,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s3_term18.json",
+   "term": 18,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s3_term19.json",
+   "term": 19,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s4_term13.json",
+   "term": 13,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s4_term17.json",
+   "term": 17,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s4_term18.json",
+   "term": 18,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s4_term19.json",
+   "term": 19,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s5_term13.json",
+   "term": 13,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s5_term17.json",
+   "term": 17,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s5_term18.json",
+   "term": 18,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s5_term19.json",
+   "term": 19,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s6_term6.json",
+   "term": 6,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s6_term13.json",
+   "term": 13,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s6_term17.json",
+   "term": 17,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  },
+  {
+   "file": "/home/hatch/workspace/matmul-pilot/wave6/flipgraph/drops/drop_perminov_s6_term18.json",
+   "term": 18,
+   "cli_mismatch": "{\"format\": \"<3,3,3>\", \"field\": \"Q\", \"rank\": 22, \"wrong_entries\": 2, \"total_entries\": 729, \"abs_error\": 2.0}"
+  }
+ ],
+ "cli_samples_verified": 133,
+ "literal_crosschecks": 66,
+ "final_state_cli": null,
+ "elapsed_s": 750.0
+}
