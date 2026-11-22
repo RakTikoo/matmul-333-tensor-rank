@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use these findings or certificates, please cite this repository."
+title: "The 3x3 matrix multiplication tensor: verified findings around rank 23"
+authors:
+  - name: "RakTikoo"
+date-released: 2026-11-21
+license: MIT
+keywords:
+  - matrix multiplication
+  - tensor rank
+  - Brent equations
+  - Laderman
+  - computational algebra
+abstract: "Exact Jacobian kernel dimensions at Laderman's and Perminov's rank-23 schemes for the 3x3 matrix multiplication tensor (kernel 76 and 94 over Q; excess over trivial tangents 6 and 24), a covering-parity case split for term-repair instances, five completely decided repair instances, a flip-component census of Perminov's cn122, exact pair-merge exclusions, and a partial quarters exclusion — all with machine-checkable certificates. No rank-22 decomposition is claimed."
