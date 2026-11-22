@@ -99,16 +99,22 @@ frozen, over {0,±1}.
 **Would overclaim:** "Perminov's scheme cannot be repaired";
 "these neighbourhoods contain no rank-22 scheme."
 
-## Item 2(d) — quarters, partial
+## Item 2(d) — quarters, completely decided
 
 **Claim.** "For Laderman's wrong=1 state with terms {2,3,4} freed
-over quarter-integers, 166 of 174 exhaustive cases are decided, all
-UNSAT (30 of 33 sign patterns complete), as of 2026-11-21; the
-instance remains open." (The audit-time figure was 121/174; the
-update is evidenced in `data/quarters-status-2026-11-21.md`.)
+over quarter-integers {0, ±1, ±1/2, ±1/4, ±3/4}, all 174
+exhaustive cases are decided, all UNSAT (33 of 33 sign patterns
+complete), as of 2026-11-22; the instance is fully decided."
+(The audit-time figure was 121/174 and the v1.0.0 figure 166/174;
+the completion is evidenced in
+`data/quarters-status-2026-11-22.md`.)
 
-**Would overclaim:** "the quarters exclusion" without
-"partial / 166 of 174" — the instance is **not** decided.
+**Scope (never dropped):** with terms {2,3,4} freed, the rest
+frozen, over the stated coefficient set, on this seed.
+
+**Would overclaim:** "Laderman cannot be repaired" without the
+scope — other free-sets and coefficient sets are separate
+instances.
 
 ## Item 3 — nullity at generic numerical points
 

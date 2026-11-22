@@ -73,11 +73,13 @@ ranks). Their agreement is the result's evidence.
    applied exactly shows no pair of terms merges in Laderman (λ=1,
    hence λ=2) or in Perminov cn122 — 759 pairs. For cn122 we have not
    found this stated elsewhere.
-5. **A partial quarters exclusion**: for Laderman's wrong=1 state with
-   terms {2,3,4} freed over quarter-integers {0, ±1, ±1/2, ±1/4, ±3/4},
-   166 of 174 exhaustive cases are decided, all UNSAT (30 of 33 sign
-   patterns complete), as of 2026-11-21. **The instance remains open**;
-   the open cases are named in `data/quarters-status-2026-11-21.md`.
+5. **A completely decided quarters exclusion**: for Laderman's
+   wrong=1 state with terms {2,3,4} freed over quarter-integers
+   {0, ±1, ±1/2, ±1/4, ±3/4}, all 174 exhaustive cases are decided,
+   all UNSAT (33 of 33 sign patterns complete), as of 2026-11-22.
+   The instance is **fully decided** — no quarters completion of
+   the freed triple exists. Full record in
+   `data/quarters-status-2026-11-22.md`.
 
 ## Verify it yourself
 
