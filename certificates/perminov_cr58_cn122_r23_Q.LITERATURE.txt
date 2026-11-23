@@ -1,0 +1,14 @@
+THIRD-PARTY SCHEME — NOT a campaign discovery.
+
+Scheme: rank-23 decomposition of <3,3,3> over Q, known in this
+campaign as "T11".
+Identity: Perminov's cr58_cn122, from his public scheme database
+(arXiv:2512.21980), as reprinted in Karunaratne & Idamekorala
+(arXiv:2607.28676) and in the boulder-swarm repository
+(github.com/ForeverMJ/boulder-swarm, file T11_solution.ts).
+Extracted to this JSON format and audited in campaign Wave 24;
+judged VERIFIED 0/729 over Q (and over F2) by the campaign's
+verify.py in a fresh process.
+Measurements on this point (kernel dimension 94, excess 24,
+pair-merge exclusion 0/253) are campaign results; the scheme
+itself is Perminov's. See data/t11-basin.md.
