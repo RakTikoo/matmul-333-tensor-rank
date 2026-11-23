@@ -50,3 +50,34 @@ This is **not** a statement about all rank-23 schemes, about
 transplants of depth ≥ 3, or about flip-graph connectivity in
 general. Rank-24 schemes were excluded (rank bookkeeping
 differs). The Heule–Kauers–Seidl database was not censused.
+
+## Extension (2026-11-23): unequal cardinalities, bank-wide
+
+**Set (named, finite):** the enlarged campaign bank — 62 files
+reducing to **60 distinct verified ⟨3,3,3⟩ schemes** (46
+distinct rank-23 schemes, plus ranks 24 ×2, 25, 26, 27).
+**Test:** all subset sums of sizes 1–4 (679,539, exact over ℚ),
+compared across adjacent cardinalities (2,1), (3,2), (4,3),
+within and across schemes — the shape a rank-reducing term
+transplant would need at unequal sizes. Measured in Wave 41;
+gated in Wave 47.
+
+### The extension claim, at its approved wording
+
+"We extended the cross-scheme transplant census to unequal cardinalities across the whole enlarged bank: all subset sums of sizes 1–4 over the 60 distinct verified ⟨3,3,3⟩ schemes we hold (679,539 sums, exact), compared between adjacent cardinalities (2,1), (3,2), (4,3), within and across schemes. The only exact equalities anywhere are 277 hits between the rank-25 scheme we ourselves constructed by splitting one term of the rank-24 metaflip scheme in Wave 22 and that parent scheme — the split's own undoing, with counts 1, 23, 253 = C(23, k−2) exactly, whose assembled candidate is the parent scheme itself. There is no genuine cross-scheme subset-sum swap at any cardinality ≤ 4 in this pool; together with the earlier equal-cardinality censuses (depth ≤ 4 over the core 8 schemes), the transplant line is closed at all cardinalities ≤ 4 for the schemes we hold. Two independent exact computations agree on every hit and every count. Depth-5 comparisons were not run; nothing here is a statement about schemes outside the bank."
+
+### Second path
+
+The Wave-47 gate re-derived the hit census by a different
+route (all entries scaled to integers by one global LCM,
+subset sums as dense integer arrays, candidates from a sha256
+index with every candidate confirmed by exact array equality —
+no modular digest) on a 21-scheme sub-pool (a seeded random 20
+of the 60, plus metaflip-24): 244,410 subset sums produced
+**exactly 277 hits, all in the split group, counts 1 / 23 / 253
+= C(23, k−2), zero genuine** — identical to the full-pool
+census, because every hit in the pool involves only split-25
+and metaflip-24 and both were in the sub-pool. The spot check
+therefore re-derives the complete hit census, not a sample of
+it; it does not re-derive the 679,539-sum total over the full
+pool, and depth-5 comparisons were not run by either path.

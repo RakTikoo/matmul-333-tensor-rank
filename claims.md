@@ -361,6 +361,132 @@ under the gate's independent readings of them.
 as a structural theorem; the cross-basin anatomy as anything but
 a labelled hypothesis; any implication for rank 22.
 
+## Item 11 — the HKS census: every unit term in the Linz population is naive
+
+**Claim.** ""We censused the complete Heule–Kauers–Seidl repository of ⟨3,3,3⟩ rank-23 schemes as distributed (17,376 schemes, all with entries in {−1, 0, 1}). Across the whole population there are 1,882 unit terms — terms whose tensor has a single nonzero entry — and every one of them is naive: its entry sits on the 27-position support of the matrix-multiplication tensor. No off-support unit term exists in this population. Three independent computations agree on every count (a SAT-solver-hosted kernel run, and two differently-structured home recounts, one of which also verified all 17,376 schemes exactly, with zero wrong entries). This extends our earlier bank censuses (41 of 41 unit terms naive across the 11 original bank schemes; 49 of 50 across 40 further schemes, the single exception being a rank-24 scheme): within rank 23, every unit term in every scheme population we have censused is naive. The statement is about these named populations — it is not a theorem about all rank-23 schemes over Q, and it is not evidence about rank 22: a rank-22 scheme need not contain any unit term.""
+
+**Evidence.** Three independent computations agree on every
+count: the Kaggle kernel census (in-kernel download and parse;
+all 1,708 unit-carrying schemes and a seeded 300-sample of
+zero-unit schemes verified exactly, 0 failed); the home recount
+(`code/recount_hks_census.py`), which re-derived the census
+from the locally held archive and verified **all 17,376 schemes
+exactly, 0 wrong entries anywhere**; and the Wave-47 gate's
+product-route derivation, which reproduced the headline tallies
+over the full population and verified a 1,000-file slice
+scheme-by-scheme (1,000/1,000 exact). The three paths share
+only the archive bytes and the `.tab` format facts, each
+re-diagnosed by its own verification leg; no code is shared.
+Full record in `data/hks-census.md`.
+
+**Scope.** The Heule–Kauers–Seidl population as distributed
+2020-08-06, entries in {−1, 0, 1} — not all rank-23 schemes
+over ℚ. This item closes the gap carried in the Scope lines of
+Items 4 and 9 ("the Heule–Kauers–Seidl database was not
+censused") for this population; schemes with entries outside
+{−1, 0, 1} and schemes outside the repository remain covered
+only by the earlier bank censuses (Items 4 and 9).
+
+**Would overclaim:** "every known rank-23 scheme…" without
+naming the population; "unit terms are always naive" as a
+universal (the rank-24 counterexample of Item 9 stands, one
+term in one scheme); any suggestion that the HKS authors state
+or endorse this census (the population is theirs, the census is
+ours); any implication for rank-22 existence.
+
+## Item 12 — walk anatomy: the terms-merging trips were cancellation artefacts
+
+**Claim.** ""Our homotopy walks along the rank-23 fibre (Wave 20 machinery, run on Kaggle) tripped a 'terms merging' monitor — pairwise term cosine above 0.99 — in four of five directions. Exact follow-up shows the trips were an artefact of the monitor, which recorded the cosine's absolute value: the signed cosines are ≈ −0.99, so the pairs approach anti-parallelism (mutual cancellation), not parallelism (fusion). While the cosines climbed, the pairs' sums stayed bounded and their rank-1 defect stayed flat or grew (1.00→1.02 in the cleanest direction), the individual term norms inflated by an order of magnitude or more, and replacing a pair by its best rank-1 approximation leaves tensor errors of 1.02–9.42 against ‖T‖ = 5.20; rational reconstructions of the fused 22-term forms were rejected by exact verification on all 729 entries. The walk was sliding along the fibre's non-compact cancellation directions, where |cos| → 1 is automatic. A structural by-product, verified exactly over Q by an independent check: each of the three tripping Perminov pairs shares a factor column identically in the seed (terms 6 and 20 share their W column; terms 2 and 18 and terms 5 and 8 share their V columns) — the cancellation directions live on those shared-factor strata. (A complete scan finds seven shared-factor pairs in cn122 in total; the three above are the ones the walk tripped on. Laderman's scheme has no identical factor-column pair at all.) We have retired the |cos| trip criterion; a merge signal requires a pair-sum rank-1 defect → 0 at bounded term norms. Nothing in this episode bears on whether rank-22 schemes exist: these paths do not approach one, and no conclusion about the families' closures is drawn.""
+
+**Evidence.** Wave 45's exact follow-up on the harvested walk
+states (signed cosines, pair-sum defects, fusion errors, and
+the fresh-process verify.py rejections of both fused-22
+candidates, 729/729 wrong each), and the Wave-47 gate's
+independent re-derivation: the three shared-factor identities
+exact over ℚ from the seed files (cn122 W 6 = 20, V 2 = 18,
+V 5 = 8), Laderman's absence of any identical factor-column
+pair, and the Perminov dir0 signed-cosine record re-checked
+from the harvested states (factor cosines +0.99471 / −0.99734 /
++1.000000; signed product −0.99207; pair-sum norm 3.0000 →
+1.7777), agreeing with Wave 45 to its recorded precision. Full
+record in `data/walk-anatomy.md`.
+
+**Scope.** A methods statement about the named runs (Wave 20
+machinery, matmul-walk v3) only. The defect, fusion and
+reconstruction numbers beyond the gate's re-derived legs stand
+on Wave 45's record plus the verify.py rejections issued there.
+
+**Would overclaim:** "the walk found the edge of the family /
+approached rank 22" (the fused forms are O(1) away); "cn122
+has three shared-factor pairs" unscoped (seven in total; the
+three named are the tripping pairs); any use of the episode as
+evidence for or against rank 22.
+
+## Item 13 — transplant closure at unequal cardinalities, bank-wide
+
+**Claim.** ""We extended the cross-scheme transplant census to unequal cardinalities across the whole enlarged bank: all subset sums of sizes 1–4 over the 60 distinct verified ⟨3,3,3⟩ schemes we hold (679,539 sums, exact), compared between adjacent cardinalities (2,1), (3,2), (4,3), within and across schemes. The only exact equalities anywhere are 277 hits between the rank-25 scheme we ourselves constructed by splitting one term of the rank-24 metaflip scheme in Wave 22 and that parent scheme — the split's own undoing, with counts 1, 23, 253 = C(23, k−2) exactly, whose assembled candidate is the parent scheme itself. There is no genuine cross-scheme subset-sum swap at any cardinality ≤ 4 in this pool; together with the earlier equal-cardinality censuses (depth ≤ 4 over the core 8 schemes), the transplant line is closed at all cardinalities ≤ 4 for the schemes we hold. Two independent exact computations agree on every hit and every count. Depth-5 comparisons were not run; nothing here is a statement about schemes outside the bank.""
+
+**Evidence.** Two independent exact computations agree on
+every hit and every count: the Wave-41 census (3-prime digest
+index over sparse exact subset sums, every candidate
+re-verified exactly) and the Wave-47 gate's re-derivation on a
+21-scheme sub-pool by a different route (global-LCM integer
+scaling, dense integer arrays, sha256 index with exact
+confirmation — no modular digest), which reproduced the
+complete hit census (277 hits, counts 1 / 23 / 253, zero
+genuine) because every hit involves only split-25 and
+metaflip-24, both in the sub-pool. Full record in
+`data/transplants.md`.
+
+**Scope.** The 60 distinct verified schemes of the enlarged
+bank; subset sums of sizes 1–4; adjacent-cardinality
+comparisons. Depth-5 comparisons were not run, and the gate's
+second path re-derives the hit census, not the 679,539-sum
+full-pool total.
+
+**Would overclaim:** "transplants are impossible" without the
+pool and cardinality bounds; "the basins are disconnected" as
+a geometric statement (this is a subset-sum census over named
+schemes, not a statement about the fibre's topology); any
+implication for rank 22 beyond "this pool, this depth, no
+swap".
+
+## Item 14 — the delta table: wrong=1 neighbours across ranks 23–26
+
+**Claim.** ""For each of six verified ⟨3,3,3⟩ schemes spanning ranks 23–26 (Laderman, Perminov's cn122, the two catalogue rank-24 schemes, our constructed rank-25 split, and our rank-26 block scheme), we computed the full single-drop battery exactly: the state left by dropping one term, and how many entries it gets wrong. A wrong=1 neighbour exists in exactly the schemes that have a unit term — Laderman (5, all naive), cn122 (3, all naive), proj-24 (1), lensC-26 (19, all naive) — and in none that do not (metaflip-24 and split-25, whose closest drops are 2 wrong). The near-miss structure does not soften gradually down the ranks 25→24→23; which flavour of wrong=1 neighbour a scheme offers is a property of its unit terms, not of its rank. Every wrong=1 state in the table is the standard flavour — one missing entry on the tensor's support, have 0 / want 1 — except one: proj-24's unique unit term sits off-support (its factors are e₅, −e₈, e₄, its single entry −1 at (5,8,4), where the tensor is zero), so its drop state has an extra entry to cancel rather than a missing one to fill: have +1 / want 0 at (5,8,4). That state is banked, and its repair instance is staged. The proj-24 and Laderman rows were re-derived by an independent exact computation for this gate, agreeing on every count; proj-24's battery had already been cross-checked drop-by-drop against the exact verifier in Wave 40.""
+
+**Evidence.** Wave 40's exact single-drop batteries over the
+six named schemes, with the proj-24 battery cross-checked
+drop-by-drop (24/24) against fresh `verify.py mismatch` runs
+in Wave 40 itself; and the Wave-47 gate's fresh exact battery,
+which re-derived the proj-24 and Laderman rows in full,
+agreeing on every count (proj-24: exactly 1 unit term, term 0,
+−1 at (5,8,4), off-support; minimum drop wrong 1 attained once;
+the minus-0 state have +1 / want 0 — Wave 40's sign correction
+independently confirmed. Laderman: 5 unit terms, all naive,
+all +1; distribution {1:5, 7:6, 8:8, 27:4}). cn122's unit
+census (3, all naive) is independently re-derived by the
+Wave-28 recount and by Item 12's gate leg. Full record in
+`data/delta-table.md`.
+
+**Scope.** Six named schemes. Recorded limit: the full drop
+distributions of metaflip-24, split-25 and lensC-26 have no
+second path beyond Wave 40's own record (plus a CLI spot-check
+of metaflip-24's minimum); their unit counts (0, 0, 19) are
+corroborated as stated in `data/delta-table.md`. The claim's
+load-bearing rows do not rest on the un-recounted
+distributions.
+
+**Would overclaim:** the bare "iff" as a theorem about
+arbitrary schemes (it is a table over six named schemes, and
+at single-drop level the equivalence is near-definitional —
+the content is the flavour and rank pattern); "the first
+off-support wrong=1 state" unscoped (it is the first in this
+campaign's bank, and the only one in the six-scheme table);
+any implication that the staged repair instance bears on
+rank 22 (a repair of proj-minus-0 would assemble a rank-23
+scheme).
+
 ## Standing scope rules for everything above
 
 - Every UNSAT comes from an encoding validated by a control (the

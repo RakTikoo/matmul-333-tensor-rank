@@ -18,6 +18,13 @@ disk — where the universal form of the census finding does not
 extend, with a single rank-24 counterexample — and a cluster
 anatomy of the three rank-23 schemes under one fixed greedy
 procedure (findings 11–12 below).
+Version 1.3.0 adds a census of the complete
+Heule–Kauers–Seidl repository of rank-23 schemes — every unit
+term in all 17,376 schemes is naive, closing the gap left open
+in finding 11 — a cautionary anatomy of the campaign's homotopy
+walks, the bank-wide closure of the transplant census at all
+cardinalities ≤ 4, and a single-drop delta table across ranks
+23–26 (findings 13–16 below).
 
 ## Headline result: exact Jacobian kernel dimensions at the two schemes
 
@@ -180,6 +187,60 @@ ranks). Their agreement is the result's evidence.
     hypothesis, untested. Full record in
     `data/cluster-anatomy.md`.
 
+13. **The unit-term census at database scale**: censusing the
+    complete Heule–Kauers–Seidl repository of ⟨3,3,3⟩ rank-23
+    schemes as distributed (17,376 schemes, all with entries in
+    {−1, 0, 1}) gives 1,882 unit terms — and every one of them
+    is naive, its entry on the tensor's 27-position support; no
+    off-support unit term exists in this population. Three
+    independent computations agree on every count, one of them
+    verifying all 17,376 schemes exactly. This closes the gap
+    stated in finding 11, for this population: within rank 23,
+    every unit term in every scheme population we have censused
+    is naive. The statement is about these named populations,
+    not a theorem about all rank-23 schemes over ℚ, and it is
+    not evidence about rank 22. Full record in
+    `data/hks-census.md`.
+14. **A cautionary anatomy of the homotopy walks**: walks along
+    the rank-23 fibre tripped a "terms merging" monitor
+    (pairwise term cosine above 0.99) in four of five
+    directions — but the monitor recorded the cosine's absolute
+    value, and the signed cosines are ≈ −0.99: the pairs were
+    approaching cancellation, not fusion, while their sums
+    stayed bounded, their rank-1 defect stayed flat or grew,
+    and their term norms inflated by an order of magnitude or
+    more. Fused 22-term reconstructions were rejected by exact
+    verification on all 729 entries. A structural by-product:
+    each of the three tripping Perminov pairs shares a factor
+    column identically in the seed (a complete scan finds seven
+    such pairs in cn122 in total; Laderman's scheme has none).
+    The |cos| trip criterion is retired. Nothing in this
+    episode bears on whether rank-22 schemes exist. Full record
+    in `data/walk-anatomy.md`.
+15. **The transplant census closed at all cardinalities ≤ 4,
+    bank-wide**: extending finding 9's census to unequal
+    cardinalities across the enlarged bank — all subset sums of
+    sizes 1–4 over the 60 distinct verified schemes (679,539
+    sums, exact), compared between adjacent cardinalities
+    within and across schemes — the only exact equalities
+    anywhere are the 277 hits between our constructed rank-25
+    split and its rank-24 parent, the split's own undoing. No
+    genuine cross-scheme swap exists at any cardinality ≤ 4 in
+    this pool; depth-5 comparisons were not run. Full record in
+    `data/transplants.md`.
+16. **A single-drop delta table across ranks 23–26**: for six
+    verified schemes spanning ranks 23–26, the full single-drop
+    battery shows a wrong=1 neighbour in exactly the schemes
+    that have a unit term (Laderman 5, cn122 3, proj-24 1,
+    lensC-26 19) and in none that do not (metaflip-24 and the
+    rank-25 split, closest drops 2 wrong) — the near-miss
+    structure does not soften gradually down the ranks. Every
+    wrong=1 state in the table is the standard flavour (have 0 /
+    want 1 on the support) except one: proj-24's unique unit
+    term sits off-support, so its drop state has an extra entry
+    to cancel (have +1 / want 0). Full record in
+    `data/delta-table.md`.
+
 ## Verify it yourself
 
 ```bash
@@ -206,6 +267,12 @@ the v1.2.0 findings (a from-scratch recount of the census
 extension, and a from-scratch re-implementation of the greedy
 cluster procedure); they likewise reference the campaign's
 internal file layout.
+`code/recount_hks_census.py` is the home recount behind
+finding 13 — the second of the three independent computations
+of the Heule–Kauers–Seidl population census (the Wave-47 claim
+gate's product-route derivation is the third) — and likewise
+references the campaign's internal file layout (it reads the
+locally held copy of the distribution archive).
 
 `verify.py` uses exact rational arithmetic (`fractions.Fraction`);
 floats are rejected. All three scheme files are **literature
@@ -228,15 +295,17 @@ results.
 - `claims.md` — every claim at its strongest honest wording, with its
   scope and the wording that would overclaim it.
 - `code/` — the exact verifier, the case-split drivers, both kernel
-  computations, the independent rigor check, and the Wave-28 and
-  Wave-32 second-path checkers.
+  computations, the independent rigor check, and the Wave-28,
+  Wave-32 and Wave-47 second-path checkers.
 - `certificates/` — the three literature schemes, the exact kernel
   bases, and the rigor run log.
 - `data/` — the novelty audits, the flip-component census, the
   triple-sweep and decided-instance reports, the quarters status,
   and the v1.1.0 records (cartography, the T11 point, the ladder,
   transplants, the Blankline audit), and the v1.2.0 records (the
-  census extension and the cluster anatomy).
+  census extension and the cluster anatomy), and the v1.3.0
+  records (the HKS population census, the walk anatomy, the
+  transplant closure extension, and the delta table).
 
 ## License
 
