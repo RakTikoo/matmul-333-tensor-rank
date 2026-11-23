@@ -8,7 +8,11 @@ What it contains is a set of exact, machine-checkable measurements and
 exclusions around the two best-known rank-23 schemes — Laderman's
 (arXiv-era catalogue: Sedoglavic's FMM collection) and Perminov's cn122
 (arXiv:2512.21980) — each shipped with the certificates and code needed
-to re-verify it independently.
+to re-verify it independently. Version 1.1.0 adds measurements at a
+third rank-23 scheme (Perminov's cr58_cn122) and at ranks 24 and 26, a
+census of the banked schemes' unit terms, a bounded cross-family
+transplant census, and an exact audit of two claims in a January 2026
+report (findings 6–10 below).
 
 ## Headline result: exact Jacobian kernel dimensions at the two schemes
 
@@ -80,12 +84,68 @@ ranks). Their agreement is the result's evidence.
    The instance is **fully decided** — no quarters completion of
    the freed triple exists. Full record in
    `data/quarters-status-2026-11-22.md`.
+6. **A census of unit terms (wrong-entry cartography)**: in the
+   rank-23 schemes we hold (the Laderman λ-family, Perminov's
+   cn122, and the T11/T12 family), every unit term is a naive term
+   e_(i,j)⊗e_(j,k)⊗e_(i,k) — 41 of 41 by direct census.
+   Equivalently, all 46 banked rank-22 states that differ from a
+   scheme by one dropped term and exactly one wrong entry have
+   that entry on the 27-position support of the tensor,
+   concentrated in 8 orbits of the entry-symmetry group covering
+   21 of 729 positions; the concentration was pre-registered and
+   held on a held-out family (5 of 5). We have not found this
+   census in the literature searched (audit in
+   `data/novelty-audit-2.md`); it is anatomy of the known schemes,
+   not evidence about rank 22. Full record in
+   `data/cartography.md`.
+7. **A third measured rank-23 point**: Perminov's cr58_cn122 — a
+   third-party scheme from his public database, reprinted by
+   Karunaratne–Idamekorala and by the boulder-swarm project, not
+   a campaign discovery — is not equivalent to Laderman's scheme
+   or to cn122 (the per-slot factor-rank multisets, invariants
+   of the isotropy action, differ from both). Its Jacobian kernel
+   is 94, exceeding the trivial tangents (70) by 24 — the same
+   excess as at cn122, in a different orbit — and no pair of its
+   terms merges over ℚ (0 of 253 pairs). Full record in
+   `data/t11-basin.md`; the scheme is in `certificates/`.
+8. **Kernel dimensions at ranks 24 and 26 (the ladder)**: at two
+   genuine rank-24 literature schemes the kernel dimensions are
+   102 and 111 (excesses 30 and 39 over the measured trivial
+   span 72); at our own rank-26 block construction the kernel is
+   187, exceeding the trivial tangents — 73 at this point, not
+   the generic 78 — by 114. Together with the rank-23 values
+   these show no monotone behaviour in the rank: within-rank
+   spread is as large as any between-rank difference, so they
+   constrain nothing about rank 22. Full record in
+   `data/ladder.md`.
+9. **A bounded cross-family transplant census**: among the eight
+   banked rank-23 schemes, the three families share almost no
+   raw material — the single term shared across families is one
+   naive unit term (at (1,0,1)) — and no pair of terms from one
+   family sums to a pair from another (1,974 distinct pair sums,
+   no genuine cross-family collision). In this bounded sense
+   (eight schemes, transplants of depth at most 2, over ℚ) the
+   families cannot be hybridised by swapping one or two terms.
+   Full record in `data/transplants.md`.
+10. **An exact audit of a January 2026 report**: Blankline
+    Research's report (Zenodo 18443297) makes two checkable
+    claims. The first (a routing inconsistency) is correct in
+    its stated single-term scope. The second (a "1+2+19"
+    structure with minimum residual √6, identical for all 2^16
+    sign patterns) does not hold for the part that can be
+    reconstructed from the publication: two independent exact
+    computations give a minimum residual² of 7, not 6, and the
+    residual is not sign-invariant; the full claim cannot be
+    decided from the publication. Neither result moves any bound
+    on the rank of ⟨3,3,3⟩. Full record in
+    `data/blankline-audit.md`.
 
 ## Verify it yourself
 
 ```bash
 python3 code/verify.py check certificates/laderman_r23_Q.json      # VERIFIED, 0/729 over Q
 python3 code/verify.py check certificates/perminov_cn122_r23_Q.json # VERIFIED, 0/729 over Q
+python3 code/verify.py check certificates/perminov_cr58_cn122_r23_Q.json # VERIFIED, 0/729 over Q
 python3 code/check_kernels.py  # pins dim ker J = 76 / 94 from both sides (needs numpy)
 ```
 
@@ -94,11 +154,17 @@ re-verification of the headline numbers. `code/moduli_exact.py`,
 `code/moduli_float.py` and `code/rigor_check.py` are the original
 campaign scripts, archived as run for provenance — they reference
 the campaign's internal file layout and are not the packaged entry
-point.
+point. `code/recount_cartography.py` and
+`code/check_kernels_independent.py` are the Wave-28 claim gate's
+independent second-path checkers for the v1.1.0 findings (a
+from-scratch recount of the cartography census, and a from-scratch
+Jacobian re-pinning of the newer kernel dimensions); they likewise
+reference the campaign's internal file layout.
 
 `verify.py` uses exact rational arithmetic (`fractions.Fraction`);
-floats are rejected. Both scheme files are **literature schemes**,
-included as the objects of study, not as campaign results.
+floats are rejected. All three scheme files are **literature
+schemes**, included as the objects of study, not as campaign
+results.
 
 ## What this is not
 
@@ -108,24 +174,28 @@ included as the objects of study, not as campaign results.
   control-validated encoding (a known-good scheme with the same terms
   freed returns SAT and verifies).
 - Novelty statements are of the form "not found in the sources
-  searched", with the search documented in `data/novelty-audit.md` —
-  they are not proofs of priority.
+  searched", with the searches documented in `data/novelty-audit.md`
+  and `data/novelty-audit-2.md` — they are not proofs of priority.
 
 ## Layout
 
 - `claims.md` — every claim at its strongest honest wording, with its
   scope and the wording that would overclaim it.
 - `code/` — the exact verifier, the case-split drivers, both kernel
-  computations and the independent rigor check.
-- `certificates/` — the two literature schemes, the exact kernel
+  computations, the independent rigor check, and the Wave-28
+  second-path checkers.
+- `certificates/` — the three literature schemes, the exact kernel
   bases, and the rigor run log.
-- `data/` — the novelty audit, the flip-component census, the
-  triple-sweep and decided-instance reports, the quarters status.
+- `data/` — the novelty audits, the flip-component census, the
+  triple-sweep and decided-instance reports, the quarters status,
+  and the v1.1.0 records (cartography, the T11 point, the ladder,
+  transplants, the Blankline audit).
 
 ## License
 
-MIT (code and text). The two scheme files are the work of Laderman
-(1976) and Perminov (2025) and are redistributed for verification.
+MIT (code and text). The three scheme files are the work of
+Laderman (1976) and Perminov (2025) and are redistributed for
+verification.
 
 ## Author
 
