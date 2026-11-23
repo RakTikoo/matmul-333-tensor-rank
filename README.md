@@ -12,7 +12,12 @@ to re-verify it independently. Version 1.1.0 adds measurements at a
 third rank-23 scheme (Perminov's cr58_cn122) and at ranks 24 and 26, a
 census of the banked schemes' unit terms, a bounded cross-family
 transplant census, and an exact audit of two claims in a January 2026
-report (findings 6–10 below).
+report (findings 6–10 below). Version 1.2.0 adds an extension of
+the unit-term census to every other verified scheme on the campaign
+disk — where the universal form of the census finding does not
+extend, with a single rank-24 counterexample — and a cluster
+anatomy of the three rank-23 schemes under one fixed greedy
+procedure (findings 11–12 below).
 
 ## Headline result: exact Jacobian kernel dimensions at the two schemes
 
@@ -139,6 +144,41 @@ ranks). Their agreement is the result's evidence.
     decided from the publication. Neither result moves any bound
     on the rank of ⟨3,3,3⟩. Full record in
     `data/blankline-audit.md`.
+11. **A census extension, and where the census finding stops**:
+    extending the unit-term census of finding 6 to every other
+    verified ⟨3,3,3⟩ scheme on the campaign disk (48 further
+    files, 40 distinct schemes, each re-verified exactly over ℚ)
+    gives 50 unit terms, of which 49 are naive — and one is not.
+    The exception is term 0 of the rank-24 scheme obtained by
+    downward projection of a ⟨3,3,4⟩ scheme (solven-eu catalogue):
+    its factors are e₅, −e₈, e₄, so its single entry sits at
+    position (5,8,4), where the matrix-multiplication tensor is
+    zero. The universal statement therefore does not extend
+    beyond the original bank; what survives is narrower — every
+    unit term in every rank-23 scheme in the extended census is
+    naive, and the published 41-of-41 statement about the
+    original 11 bank schemes is untouched. Two independent exact
+    computations agree on every count. The
+    Heule–Kauers–Seidl database of 17,000+ schemes was not
+    censused. Full record in `data/census-extension.md`.
+12. **A cluster anatomy under one fixed greedy procedure**: with
+    the core taken as a scheme's unit terms and the remaining
+    terms merged agglomeratively into clusters of at most 3 so
+    as to minimise the total number of off-support positions at
+    which cluster sums are nonzero ("garbage") — a greedy
+    procedure, not an optimal one — total garbage falls from the
+    all-singletons baselines 184 to 72 at Laderman, 422 to 136
+    at Perminov's cn122, and 390 to 148 at Perminov's
+    cr58_cn122. In the Laderman and cn122 partitions the
+    clusters' on-support parts together with the core cover the
+    tensor's 27 support positions with no overlap at all; in
+    cr58_cn122 there are exactly 2 on-support overlaps. Two
+    independent implementations agree on every total and on the
+    partitions themselves. These are measurements under this
+    procedure, not invariants of the schemes; whether the shared
+    qualitative anatomy is generic for sparse exact schemes is a
+    hypothesis, untested. Full record in
+    `data/cluster-anatomy.md`.
 
 ## Verify it yourself
 
@@ -160,6 +200,12 @@ independent second-path checkers for the v1.1.0 findings (a
 from-scratch recount of the cartography census, and a from-scratch
 Jacobian re-pinning of the newer kernel dimensions); they likewise
 reference the campaign's internal file layout.
+`code/recount_census_extension.py` and `code/clusters_greedy.py`
+are the Wave-32 claim gate's independent second-path checkers for
+the v1.2.0 findings (a from-scratch recount of the census
+extension, and a from-scratch re-implementation of the greedy
+cluster procedure); they likewise reference the campaign's
+internal file layout.
 
 `verify.py` uses exact rational arithmetic (`fractions.Fraction`);
 floats are rejected. All three scheme files are **literature
@@ -182,14 +228,15 @@ results.
 - `claims.md` — every claim at its strongest honest wording, with its
   scope and the wording that would overclaim it.
 - `code/` — the exact verifier, the case-split drivers, both kernel
-  computations, the independent rigor check, and the Wave-28
-  second-path checkers.
+  computations, the independent rigor check, and the Wave-28 and
+  Wave-32 second-path checkers.
 - `certificates/` — the three literature schemes, the exact kernel
   bases, and the rigor run log.
 - `data/` — the novelty audits, the flip-component census, the
   triple-sweep and decided-instance reports, the quarters status,
   and the v1.1.0 records (cartography, the T11 point, the ladder,
-  transplants, the Blankline audit).
+  transplants, the Blankline audit), and the v1.2.0 records (the
+  census extension and the cluster anatomy).
 
 ## License
 

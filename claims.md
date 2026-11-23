@@ -305,6 +305,62 @@ wholesale statement (claim (i) is confirmed; their Theorem 8 is
 untouched); "the 1+2+19 structure is impossible" (only its
 printed numbers fail, on the reconstructible core).
 
+## Item 9 — census extension: the universal form does not extend beyond the original bank
+
+**Claim.** "We extended the Wave 26/28 unit-term census to every other verified ⟨3,3,3⟩ scheme on our disk: 48 further files, 40 distinct schemes, each re-verified exactly over Q. Of the 50 unit terms in those 40 schemes, 49 are naive — and one is not. The exception is term 0 of the rank-24 scheme obtained by downward projection of a ⟨3,3,4⟩ scheme (solven-eu catalogue): its factors are e₅, −e₈, e₄, so its single entry sits at position (5,8,4), where the matrix-multiplication tensor is zero. The universal statement 'every unit term in every verified scheme is naive' therefore does not extend beyond the original bank. What survives is narrower: every unit term in every rank-23 scheme in the extended census is naive (the published 41-of-41 statement about the original 11 bank schemes is untouched), and the single counterexample is at rank 24, in a scheme of a different construction type. Two independent exact computations agree on every count. Unit-term-ness is a property of a scheme's presentation, not of its orbit: the 30 de Groote transforms of Laderman in the census carry no unit terms at all. This is anatomy of the schemes we hold, not evidence about rank 22."
+
+**Evidence.** Two independent exact computations agree on every
+count: the Wave-30 census and the Wave-32 gate's from-scratch
+recount (`code/recount_census_extension.py`), which re-judged
+each of the 48 files two ways — its own exact Fraction
+recomputation (0 wrong of 729 for every file) and a fresh-process
+`verify.py check` run (48/48 VERIFIED) — and recomputed the
+census from the tensor definition in both countings (per file:
+210 unit terms, 209 naive, 1 off-support; per distinct scheme:
+50, 49, 1). The counterexample was inspected directly from its
+file. Full record in `data/census-extension.md`.
+
+**Scope.** The named population only: the 48 held-out files /
+40 distinct schemes on the campaign disk. The
+Heule–Kauers–Seidl database of 17,000+ schemes was not censused,
+and schemes not on this disk are outside the population.
+
+**Would overclaim:** "every known rank-23 scheme…" without
+naming the census population; "the pattern fails at rank 24" as
+a general statement about rank-24 schemes (exactly one rank-24
+scheme in the census carries a unit term at all); any
+implication for the HKS database or for rank-22 existence.
+
+## Item 10 — cluster anatomy under the registered greedy method
+
+**Claim.** "Under one fixed greedy procedure — core = the scheme's unit terms; the remaining terms merged agglomeratively into clusters of at most 3 so as to minimise the total number of off-support positions at which cluster sums are nonzero ('garbage'); the procedure is greedy, not optimal — the three rank-23 schemes measure as follows. Laderman: garbage falls from the all-singletons baseline 184 to 72, through four triples each carrying garbage 9 and six singletons each carrying garbage 6. Perminov's cn122: 422 to 136. Perminov's cr58_cn122 (T11): 390 to 148. In the Laderman and cn122 partitions, the clusters' on-support parts together with the core cover the tensor's 27 support positions with no overlap at all — every cancellation in those partitions is off-support; in T11 there are exactly 2 on-support overlaps. Two independent implementations of the procedure agree on every total and on the partitions themselves. These are measurements of the schemes under this procedure, not invariants: a different objective or an optimal partitioner could give different numbers. Whether the shared qualitative anatomy — a naive core, a few garbage-cancelling triples, a tail of near-clean singletons — is generic for sparse exact schemes is a hypothesis; no test of it has been run."
+
+**Evidence.** Two independent implementations of the procedure
+agree on every total and on the partitions themselves: the
+Wave-30 measurement and the Wave-32 gate's re-implementation
+from the registered specification alone
+(`code/clusters_greedy.py`), which reproduced the baselines
+(184 / 422 / 390), the greedy totals (72 / 136 / 148), every
+step of every greedy history, the Laderman file-order record
+([20, 23, 20, 30, 16, 9], total 118), the exact final
+partitions, and all three support-tiling counts (0 overlaps for
+Laderman and cn122; exactly 2 for T11). Full record in
+`data/cluster-anatomy.md`.
+
+**Scope.** A measurement under one named algorithm on three
+named schemes. The totals are outputs of the procedure — not
+invariants of the schemes, not optimal partitions, and not
+comparable to numbers produced by any other objective or method.
+The specification's three underdetermined points (tie-break
+reading, lexicographic referent, term-index convention) are
+recorded in `data/cluster-anatomy.md`; the agreement above is
+under the gate's independent readings of them.
+
+**Would overclaim:** the bare totals ("Laderman's garbage is
+72") without the method; "the schemes decompose into clusters"
+as a structural theorem; the cross-basin anatomy as anything but
+a labelled hypothesis; any implication for rank 22.
+
 ## Standing scope rules for everything above
 
 - Every UNSAT comes from an encoding validated by a control (the
