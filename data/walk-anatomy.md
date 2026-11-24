@@ -78,3 +78,16 @@ bounded term norms. A gauge-fixed re-walk (inflation projected
 out) is the registered decider for whether these families have
 approachable boundaries at all; as of this record's date it
 stood built and queued, not run.
+
+## Extension (v1.4.0, 2026-11-24): the gauge-fixed re-walk ran — all five directions stall
+
+The registered decider has now run. The gauge-fixed re-walk
+(term-norm cap at 3× the seed maximum, a defect-monotone
+exception, a trip defined as defect < 0.05 at bounded norms)
+ran in all five registered directions from cn122 and
+Laderman; every direction stalled — no trip under the
+corrected criterion. Under the line's pre-registered rule,
+the walk approach to rank reduction from these seeds is
+closed. At its approved wording (claims.md Item 17):
+
+"The walk line is closed. The gauge-fixed re-walk built after the Wave 45 artefact anatomy (term-norm cap at 3× the seed maximum, defect-monotone exception, a trip defined as defect < 0.05 at bounded norms) ran in all five registered directions; every direction stalled. Under the line's pre-registered rule, the walk approach to rank reduction from these seeds is closed. This complements the v1.3.0 walk-anatomy item: the earlier trips were cancellation artefacts, and the corrected instrument finds no genuine approach either."

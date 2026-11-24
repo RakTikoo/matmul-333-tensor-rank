@@ -487,6 +487,460 @@ any implication that the staged repair instance bears on
 rank 22 (a repair of proj-minus-0 would assemble a rank-23
 scheme).
 
+## Item 15 — the repairs closure: 1,843/1,843 cases UNSAT
+
+**Claim.** ""The repair front is decided at its registered scope. For each of seven banked near-miss states — six 22-term wrong=2 states from rank-23 parents and the one off-support wrong=1 state (proj-24 minus term 0) — we enumerated every covering-parity case of the free-4 repair move (four terms freed, coefficients in {0, ±1}, the other terms frozen, over Q): 1,843 cases in total. All 1,843 are UNSAT, with the encoder's control gate passed in the same run and its control artefacts re-verified exactly at home. No rank-22 scheme is reachable by this repair move from any of these seven states, and the off-support state has no free-4 {0,±1} repair to a new rank-23 scheme either. The closure is scoped to this move, this free-set size, and this coefficient set; other repair settings are separate fronts.""
+
+**Evidence.** The Wave 51 run (laptop, generalised
+parity-split driver) decided all seven instances: six
+wrong=2 instances at 304 cases each and the off-support
+wrong=1 instance at 19 cases, summing to 1,843, with 0 SAT,
+0 no-conclusion and 0 not-attempted. The encoder's control
+gate passed in the same run, and the control artefacts were
+re-judged at home in fresh `verify.py` processes (all
+VERIFIED). Full record in `data/repairs-closure.md`.
+
+**Scope.** The free-4 repair move (four terms freed,
+coefficients in {0,±1}, the rest frozen) over ℚ, on the seven
+named states. An UNSAT excludes a covering vector for the
+freed terms on that seed — not a neighbourhood in the
+continuous sense.
+
+**Would overclaim:** "repairs are impossible" without the
+scope; any suggestion the closure bears on rank 22 in
+general.
+
+## Item 16 — the new-basins front fully decided: 336/336
+
+**Claim.** ""The new-basins free-4 front is fully decided. The 21 wrong=1 states obtained in Wave 39 from nine orbit-distinct catalogue schemes generated 336 free-4 {0,±1} repair cases over Q; all 336 are UNSAT (21/21 instances decided, controls passed). No rank-22 scheme is reachable by this repair move from any of these 21 states.""
+
+**Evidence.** The completed Kaggle run decided 21/21
+instances (16 cases each, 336 total), all UNSAT, controls
+passed in-session. The 21 states derive from nine solven-eu
+catalogue schemes proven pairwise orbit-distinct in Wave 39.
+Full record in `data/repairs-closure.md`.
+
+**Scope.** The same free-4 {0,±1} move, on these 21 states.
+The tally may be summed with Item 15's only as "2,179 decided
+repair cases across the two fronts", each front named.
+
+**Would overclaim:** dropping "by this repair move from
+these states"; merging the two fronts' tallies without
+naming both.
+
+## Item 17 — the walk line closure
+
+**Claim.** ""The walk line is closed. The gauge-fixed re-walk built after the Wave 45 artefact anatomy (term-norm cap at 3× the seed maximum, defect-monotone exception, a trip defined as defect < 0.05 at bounded norms) ran in all five registered directions; every direction stalled. Under the line's pre-registered rule, the walk approach to rank reduction from these seeds is closed. This complements the v1.3.0 walk-anatomy item: the earlier trips were cancellation artefacts, and the corrected instrument finds no genuine approach either.""
+
+**Evidence.** The completed walk4 run: all five registered
+directions STALL, no TRIP, under the criterion pre-registered
+when the instrument was built (defect < 0.05 at bounded term
+norms). This is the decider run that follows Item 12's
+anatomy; the two items are distinct — Item 12 is about the
+old monitor's artefact, this one is the corrected
+instrument's verdict. Full record in `data/walk-anatomy.md`
+(v1.4.0 extension).
+
+**Scope.** These seeds, this instrument, this criterion.
+
+**Would overclaim:** "walks cannot reach rank 22";
+presenting this item as re-proving Item 12.
+
+## Item 18 — the hinge free-4 front, partial: 631/3,072
+
+**Claim.** ""Of the 3,072 free-4 {0,±1} repair cases derived from the 192 hinge wrong=1 states of Wave 48, 631 have been decided — all UNSAT (39 of 192 instances fully decided, one further instance partially). The remaining 2,441 cases are not yet attempted; this front is partial, and no front-level conclusion is drawn from it.""
+
+**Evidence.** The 192 states derive from Wave 48's hinge
+construction (84 exact schemes from re-factorising cn122's
+seven shared-factor pairs). The completed run decided 631
+cases, all UNSAT: instances I000–I038 fully, I039 at 7/16;
+2,441 cases were not attempted. Full record in
+`data/partial-fronts.md`.
+
+**Scope.** A partial front: decided cases only, with the
+denominator and the not-attempted count always attached.
+
+**Would overclaim:** any phrasing implying the hinge front
+is decided or closed; "631 UNSAT" without 3,072 and 2,441.
+
+## Item 19 — the proj24-family free-4 front, partial: 943/1,140
+
+**Claim.** ""Of the 1,140 free-4 {0,±1} repair cases derived from the 60 wrong=1 drop states of the Wave 55 shear families (on the exact rank-24 parents proj24 and metaflip24), 943 have been decided — all UNSAT (49 of 60 instances fully decided, one partially). The remaining 197 cases are not yet attempted; the front is partial. A repair here would have assembled an exact rank-23 scheme, not a rank-22 one; the front's value is ladder connectivity (Wave 66), and the wording must keep that scope.""
+
+**Evidence.** The 60 states are single drops from the Wave
+55 shear families on the exact rank-24 parents proj24 (6
+pairs) and metaflip24 (1 pair), 19 cases per instance. The
+completed run decided 943 cases, all UNSAT: 49/60 instances
+fully, one at 12/19; 197 not attempted. Full record in
+`data/partial-fronts.md`.
+
+**Scope.** The parents are rank 24 and the states 23-term: a
+repair here assembles an exact rank-23 scheme, not a rank-22
+one. The front's value is ladder connectivity.
+
+**Would overclaim:** presenting these as rank-22 repair
+cases; implying the front is closed.
+
+## Item 20 — the shear-family free-4 front, partial, with the lost run disclosed
+
+**Claim.** ""Of the 14,016 free-4 {0,±1} repair cases derived from the 876 wrong=1 states of Wave 56, 414 have been decided — all UNSAT (25 of the 360 instances in the completed kernel, covering the Kauers, cn97 and c88 parents). The companion kernel's run (the cn119 and cn120 instances, 8,256 cases) was lost when its interactive session ended before the results could be harvested; the partial verdicts observed during that session are unrecoverable and are **not** counted anywhere in this release. A committed re-run is queued. The shear-family front is therefore mostly undecided: 5,346 cases in the completed kernel were not attempted, and the lost kernel's 8,256 cases stand wholly undecided.""
+
+**Evidence.** Wave 56 derived 876 wrong=1 states from five
+C0-gated rank-23 parents (468 exact shear variants). The
+Kauers/cn97/c88 kernel completed on budget: 414 UNSAT, 0 SAT,
+25/360 instances fully decided, 5,346 not attempted. The
+cn119/cn120 kernel's run was lost (interactive session ended
+before harvest); its ~45 observed partial verdicts are
+unrecoverable and are counted nowhere in this release. Full
+record in `data/partial-fronts.md`.
+
+**Scope.** The honest decided fraction of the surviving
+record is 414/5,760; of the staged family, 414/14,016 with
+the loss stated.
+
+**Would overclaim:** any shear-family total that silently
+sums decided and lost runs; counting any verdict from the
+lost session.
+
+## Item 21 — rulers at cn122: no rank drop on the lines or the flat planes
+
+**Claim.** ""At Perminov's rank-23 scheme cn122 (Jacobian nullity 94 over Q, excess 24 over the trivial span), we computed the exact straight lines in the rank-23 variety through the point. Within the searched scope — all directions in two-dimensional coordinate planes of the kernel basis, plus the shear lines — there are exactly 21 ruler directions; 114 of the 153 two-planes spanned by pairs of the 18 flat basis rulers are themselves entirely flat. Along all 21 lines there is no term-zero event and no two-term proportionality event at any rational parameter: no rank drop occurs anywhere on them (42 sampled schemes on the lines were verified exactly). Extending the scan to the flat planes: no term vanishes anywhere in any of the 134 flat planes, and for all 596 tested (plane, term-pair) combinations the simultaneous proportionality ideal is the unit ideal, so no two terms merge at any point of those planes, even over ℂ. Random directions are never rulers (0 of 3,000 sampled at cn122; 0 of 3,000 at Laderman, which has no shear lines at all). Scopes: directions supported on three or more kernel basis vectors outside the flat planes are not excluded, and the plane merge scan covers the restricted pair set stated in our record.""
+
+**Evidence.** Exact rational computation at cn122: Jacobian
+nullity 94 (Laderman's 76 reproduced as control); 21 ruler
+directions from the structured hunt in two-dimensional
+coordinate planes of the kernel basis plus the shear lines;
+114 of 153 pair-spanned two-planes fully flat; 42/42 schemes
+sampled on the lines verified exactly; term-zero in none of
+the 134 flat planes; for all 596 tested (plane, pair)
+combinations the simultaneous 3-slot minor ideal has
+Gröbner basis [1]. Full record in `data/rulers-and-gg611.md`.
+
+**Scope.** The named lines and planes and the restricted
+pair set stated in the record; directions supported on three
+or more kernel basis vectors outside the flat planes are not
+excluded. The Laderman leg is sampling plus pair census, not
+the full structured search.
+
+**Would overclaim:** "the rank-23 variety near cn122
+contains no rank drop" unscoped; "no lines exist at
+Laderman"; calling the flat-plane result a statement about
+the whole variety.
+
+## Item 22 — gg611, the unique grip-gain scheme
+
+**Claim.** ""Exactly one point on the 21 ruler lines through cn122 strictly increases the identical-factor pair count: the t = 1 point of one shear line, with 8 pairs — cn122's seven plus a (6,15) pair in the first factor that cn122 itself does not have. That scheme (gg611) is banked and verified exactly (rank 23 over Q). Its shear family gives 96 exact variants (93 new to our bank) and 150 new 22-term wrong=1 states, from which 2,400 free-4 repair cases are derived and staged. The other three candidate points on the lines are pair swaps at count 7, not gains — we record this correction of Wave 57's preliminary reading in the same place.""
+
+**Evidence.** The grip-gain census over all 21 ruler lines
+found exactly one strict gain; the scheme is banked and was
+fresh-verified exactly (rank 23 over ℚ, 0/729) — and the
+shipped file `data/gg611_r23_Q.json` verifies with this
+repository's `code/verify.py`. Its shear family: 96 exact
+variants (93 new), 150 distinct wrong=1 states, 2,400 free-4
+cases derived. Full record in `data/rulers-and-gg611.md`.
+
+**Scope.** gg611 is a rank-23 scheme on a known line through
+a literature scheme, not a new kind of scheme. The 2,400
+cases are staged, not decided.
+
+**Would overclaim:** calling gg611 a new kind of scheme;
+implying the 2,400 cases are decided.
+
+## Item 23 — the Hensel bridge: calibration and a native-point conversion
+
+**Claim.** ""We built and calibrated a 3-adic (Hensel) lifting bridge from F3 decompositions to Q, in the spirit of the lifting steps used in recent flip-graph work (Khoruzhii–Gelß–Pokutta, ISSAC 2026): a non-singular F3 point of a decomposition system is Newton-lifted to Z/3⁴² and its coordinates are rationally reconstructed. Calibration: Perminov's cn122 and Laderman's scheme, reduced mod 3, lift and reconstruct **entry-identically**, and both reconstructions verify exactly over Q; the Jacobian ranks mod 3 reproduce the known over-Q nullities (94 and 76). The bridge also converts genuinely new finite-field points, not only reductions of known schemes: a solver-found F3-native rank-7 decomposition of ⟨2,2,2⟩, differing from Strassen's scheme mod 3 in 13 entries, lifts to a verified rank-7 scheme over Q that is not entry-identical to Strassen's. The bridge changes the value of our F3 searches — any future non-singular F3 rank-22 point would lift the same way — but it finds nothing by itself, and non-singularity of a hypothetical F3 point would have to be checked when one exists.""
+
+**Evidence.** Both controls lift and reconstruct
+entry-identically and verify fresh over ℚ; the mod-3
+Jacobian ranks reproduce the over-ℚ nullities (94, 76). The
+F3-native ⟨2,2,2⟩ rank-7 point differs from Strassen mod 3 in
+13 entries; its lift verifies over ℚ and is not
+entry-identical to Strassen's. Full record in
+`data/hensel-bridge.md`.
+
+**Scope.** A methods calibration. Hensel lifting of
+finite-field decompositions is published prior art
+(Khoruzhii–Gelß–Pokutta, ISSAC 2026; Moosbauer–Poole); the
+bridge converts non-singular points only, and finds nothing
+by itself.
+
+**Would overclaim:** "we invented Hensel lifting for
+decompositions"; "an F3 rank-22 scheme would give a ℚ
+rank-22 scheme" without the non-singularity condition;
+presenting the ⟨2,2,2⟩ scheme as new mathematics.
+
+## Item 24 — one-signedness: the 11,777-state census and the 2,010-vs-1 sign census
+
+**Claim.** ""Across every unit-residual near-miss state this campaign has banked, the residual is one-signed without exception: 11,777 on-support wrong=1 states (1,282 of the 22-term class and 10,495 of the 25-term class, generated by unit-term drops from verified schemes and their shear variants) have residual +E_e — a single missing entry on the tensor's support — in 11,777 of 11,777 cases. The matching sign census of unit terms themselves finds the same asymmetry: in our 53-file scheme bank and in the complete Heule–Kauers–Seidl population of 17,376 rank-23 schemes, unit terms number 2,010 positive against exactly 1 negative — and the single negative unit term is proj-24's off-support term, whose drop state is the campaign's only −E_e state, at an off-support entry, with 23 terms. No on-support −E_e state is known to us in any of this material. This is a census of the named pools, not a theorem: a rank-22 scheme, if one exists, need not arise from these pools, and the pattern's force is that a whole class of repair constructions (opposite-sign state surgery) is starved by it — the manufacturing of an on-support −E_e state is the named precondition for reviving that class.""
+
+**Evidence.** Exact censuses of the named pools: 1,282
+22-term-class states (Waves 56/58 drop pools) and 10,495
+25-term-class states (Wave 67, the lensC family), residual
++E_e in 11,777/11,777; unit terms 128 positive vs 1 negative
+in the 53-file bank and 1,882 positive vs 0 negative in the
+complete Heule–Kauers–Seidl population — the HKS positive
+tally reproducing Item 11's census count exactly. Full
+record in `data/one-signedness.md`.
+
+**Scope.** A census of the named pools, not a theorem. The
+25-term class comes from a single parent family (lensC and
+its variants); that composition is part of the claim.
+
+**Would overclaim:** "unit residuals are always positive" as
+a universal claim; "one-signedness theorem"; any use of the
+census as evidence that rank 22 does not exist.
+
+## Item 25 — Singer Γ39 over F3: exact non-existence
+
+**Claim.** ""One symmetric ansatz is excluded exactly. Let Γ39 be the order-39 group generated by a Singer cycle of order 13 in GL(3,3) and the Frobenius map, acting on rank-1 tensors over F3 by simultaneous conjugation (with the transposed action on the third leg that the stored form of the multiplication tensor requires). The Γ39-fixed subspace of the tensor space has dimension 31, but every sum of whole Γ39-orbits of rank-1 tensors lands in a fixed 17-dimensional subspace of it, and the multiplication tensor is not in that subspace. Therefore no Γ39-equivariant decomposition of ⟨3,3,3⟩ into 22 terms over F3 exists, for any orbit partition. The obstruction is arithmetic, not numerical: the group order is divisible by the characteristic, and the norm map's image is too small (a modular norm gap). Parameter counting alone would not have excluded this ansatz. This is a statement about this one ansatz over F3; it is not evidence about rank 22 in general, and symmetric non-existence results for other groups over ℂ are in the literature (Burichenko).""
+
+**Evidence.** Exact linear algebra over F3: dim Fix(Γ39) =
+31; the span of all orbit sums of sizes 1, 3, 13 has
+dimension 17 and excludes T; counts cross-checked by an
+independent numpy path. The parameter count alone would not
+have excluded the ansatz. Full record in
+`data/symmetric-ansatze.md`.
+
+**Scope.** This one ansatz (this group, this action) over
+F3. Symmetric non-existence results for other groups over ℂ
+are in the literature (Burichenko).
+
+**Would overclaim:** "symmetric rank-22 schemes don't
+exist"; any implication for the C13-only ansatz (Item 27 —
+the norm gap does not extend to it); "first non-existence
+proof for a symmetric ansatz".
+
+## Item 26 — involution pairing: killed on paper
+
+**Claim.** ""A second ansatz family is excluded by counting alone. If a rank-22 decomposition were invariant under an involution of the tensor's symmetry group, its terms would split into swapped pairs and fixed terms; the involution leaves 365 independent equations on the 729-entry tensor space, while every pairing pattern of 22 terms supplies at most 286 effective unknowns — short by at least 79 in all cases, over Q and over F3 alike. No involution-paired rank-22 decomposition exists. (An order-2 group halves the equations but barely compresses the terms; that asymmetry is the whole obstruction.)""
+
+**Evidence.** The fixed space of the involution on the 729
+entries has dimension 365 (direct sign count; Burnside
+cross-check (729+1)/2 = 365; identical over F3). Per-partition
+effective unknowns run 275–286 against 365 independent
+equations — short by 79–90 in every partition 22 = 2k + f.
+Full record in `data/symmetric-ansatze.md`.
+
+**Scope.** Involution-paired decompositions, over ℚ and F3
+alike. Order-2-containing groups are a separate question
+(the census, Item 31, treats them separately, and some
+survive its filters).
+
+**Would overclaim:** extending the kill to all
+order-2-containing groups; calling the count a theorem about
+symmetric schemes in general.
+
+## Item 27 — the C13-only Singer ansatz: feasibility verdict BUILD
+
+**Claim.** ""The C13-only residue of the Singer idea survives the tests that killed its parent. A rank-1 tensor fixed by the order-13 Singer cycle is exactly a triple of elements of GF(27) (one per factor, in the commutant field), so the nine fixed terms of the only viable partition (one 13-orbit plus nine fixed terms) contribute 63 effective unknowns; the full system has 88 effective unknowns against 93 equations — the nearest-to-square full rank-22 ansatz we have measured. Unlike the Γ39 case (Item 11), there is no norm gap: the orbit sums alone span the whole 93-dimensional fixed space and the multiplication tensor lies in their span. We record the honest counterweight in the same place: a discrete count of the ansatz's image falls short of the equation count (log₃ 80.46 against 93), so a solution would require the tensor to be special beyond linear reachability. The system is specified in full in our record; a solver run on it is in flight and undecided at the time of this release. Nothing here is evidence that a C13-equivariant scheme exists.""
+
+**Evidence.** The fixed rank-1 tensors are parametrised
+exactly by triples of GF(27) elements (count re-derived from
+the parametrisation: (27−1)³/(3−1)² = 4,394); orbit sums
+span the full 93-dimensional fixed space and T lies in their
+span; the system is 108 raw / 88 effective unknowns against
+93 equations. The discrete counterweight (log₃ 80.46 vs 93)
+is recorded in the claim itself. Full record in
+`data/symmetric-ansatze.md`.
+
+**Scope.** A feasibility study and a specification — not a
+result about existence. The solver run is in flight and
+undecided at the date of this release.
+
+**Would overclaim:** "promising construction" or any
+existence-flavoured phrasing; quoting margin −5 without the
+discrete shortfall 12.54; implying the launched run has
+produced a verdict.
+
+## Item 28 — the lensC pipeline: 612 variants, 10,495 states, 167,920 cases staged
+
+**Claim.** ""Our own rank-26 scheme lensC carries 51 identical-factor pairs, the most of any scheme in our bank. Its full shear family — 612 variants, every one exact-verified and new — yields 10,495 distinct 25-term wrong=1 states by unit-term drops, all of the standard flavour (these are the 25-term half of the Item 10 census). From them we derived 10,495 free-4 repair instances (167,920 cases). The scope matters: a repair of one of these states would be an exact rank-**25** scheme — the first rung of the ladder down from 26 — not a rank-22 candidate. A 1,792-case selection has been built into a solver kernel; the family is staged, not decided.""
+
+**Evidence.** The parent passed the C0 gate (fresh
+`verify.py` VERIFIED, exact rank 26, 0/729) before anything
+was counted on it; the pair census reproduced 51; all 612
+shear variants exact, distinct and new (408/612 with entries
+outside {0,±1}); 10,495 distinct 25-term wrong=1 states, all
+standard flavour; instances derived with the generalised
+driver (regression-verified identical on a decided instance
+first). Full record in `data/lensc-pipeline.md`.
+
+**Scope.** A repair of one of these states assembles an
+exact rank-25 scheme — the ladder's first rung — not a
+rank-22 candidate. The family is staged, not decided.
+
+**Would overclaim:** any wording letting a reader take the
+lensC instances as rank-22 searches; the inflated figures
+(1,326 variants / 11,901 states / 226,119 cases) that
+appeared in one internal handoff and are not the record;
+"richest scheme" without "in our bank".
+
+## Item 29 — the border line: conversion equivalence and the ALS calibration anatomy
+
+**Claim.** ""Three border-rank statements, all scoped. (1) The often-imagined shortcut does not exist: requiring a 21-term Laurent family to satisfy the tensor identity to *all* orders is exactly the statement R ≤ 21, and the 22-term version is exactly R ≤ 22; a single extra term can push the first defect one order higher only when that defect is itself rank 1, and killing all defects is the original problem. The border-plus-one route is equivalent in difficulty to exact rank. (2) Border rank 21 for ⟨3,3,3⟩ is proved in the literature only through Schönhage's asymptotic sum inequality — the saving lives in the limit over direct sums and tensor powers; no explicit 21-term Laurent family for the single tensor appears in any source we could access, and an earlier version of our own strategy document claimed otherwise and has been corrected. (3) Our numerical route to a border family failed its calibration, and we measured why: on Bini's border-10 family for ⟨3,2,2⟩ the search does show the genuine border signature (residual falling as a power law in the factor norms, exponent 3.58 against a predicted 3), and high-precision polishing drives the defect to 1.6e-76 — but the point it converges to is a *generic* point of a solution component with 106 genuine moduli (Jacobian nullity 126, of which only 20 are gauge), so its coordinates admit no low-degree algebraic description for exact reconstruction to find. The failure is genericity, not precision. The border line is parked, with three named revivals in our record (pattern-constrained solves, homotopy from Bini's rational point, α-theory certification).""
+
+**Evidence.** The equivalence is proved in the record
+(order-by-order analysis of the Laurent identity; the
+defect-push requires the first defect to be rank 1). The
+literature finding rests on the sources searched
+(Schönhage's bound via the asymptotic sum inequality; no
+explicit single-tensor family found). The anatomy is
+measured: Bini calibration — judge leg PASS, the border
+signature observed (α = 3.58, R² = 0.991), extraction FAIL;
+Gauss–Newton polish to defect 1.64e-76; Jacobian rank
+194/288, nullity 126 = 20 gauge + 106 genuine moduli; PSLQ
+reconstruction failing with the generic signature. Full
+record in `data/border-line.md`.
+
+**Scope.** A negative-results / anatomy item, grouped under
+negative results, never under constructions. The α = 3.58
+fit is a calibration observation on ⟨3,2,2⟩, not a discovery
+about ⟨3,3,3⟩.
+
+**Would overclaim:** "border rank 21 is unproven" (it is
+proven, by the asymptotic argument; what does not exist in
+print is the explicit family); "we almost reconstructed a
+border family" (no ALS-derived candidate ever passed the
+exact pre-screen, so none was judged).
+
+## Item 30 — the wrong=5 state over F3 and its closed neighbourhood
+
+**Claim.** ""Over F3, the closest near-miss our searches have produced is a 22-term state with exactly 5 wrong entries of 729 (GPU grammar annealing, 3.68×10¹² aggregate steps; harvested and re-judged exactly at home). All five defects are missing entries on the tensor's support — the one-signed flavour of Item 10. The state's local neighbourhood is now closed exactly, in three senses. (i) Weights: over all 3²² coefficient assignments the minimum wrong count is 5 — the annealer's weights were already optimal for its term shapes. (ii) Shapes: freeing the factors inside the state's own support template gives an unsatisfiable system, for an exact reason — the five defect entries are precisely the support entries no monomial of the template can reach; widening the supports by all cyclic shifts still leaves the entry (1,3,0) unreachable. (iii) Swaps: replacing any one term by any menu shape that covers (1,3,0) (136 such shapes; 35 swaps keep every support entry reachable) gives 35 systems, all unsatisfiable. So no single-term perturbation of this state is an F3 rank-22 scheme. This is a statement about one state's neighbourhood over F3; two-term swaps and swaps on widened supports are explicitly not covered, and nothing here is evidence about rank 22 over Q.""
+
+**Evidence.** The state is shipped as `data/wrong5-state.json`
+(sha256 2883c3c2…31c) and re-judged by the packaged
+`code/checkp.py`: wrong = 5/729, defects exactly (1,3,0),
+(3,2,5), (4,4,4), (6,0,6), (7,5,8), all got-0/want-1. The
+three closures: the exact linear minimum over coefficient
+assignments is 5 (729×22 system, rank 22, inconsistent;
+feasibility UNSAT at budgets 1–4); the own-support template
+(74 unknowns) is UNSAT for the stated reachability reason,
+as are the widened templates (144 and 213 unknowns); the 35
+reachability-passing swap systems are 35/35 UNSAT with
+planted controls 2/2 PASS. Full record in
+`data/wrong5-case-study.md`.
+
+**Scope.** One state's neighbourhood over F3. Two-term swaps
+and swaps on widened supports are explicitly not covered;
+nothing here is evidence about rank 22 over ℚ.
+
+**Would overclaim:** "closest known F3 near-miss" (no
+literature category supports "known" — the claim says
+"closest our searches have produced"); "the F3 floor is 5"
+(an annealing-floor observation, not a bound, and not gated
+here).
+
+## Item 31 — the symmetry census over F3: three survivors, D13/Q12 not realisable
+
+**Claim.** ""We censused the group actions that could organise a rank-22 decomposition over F3, passing each through two exact filters — a parameter count (unknowns vs independent equations, per orbit partition of 22) and a reachability test (the tensor must lie in the span of the group's orbit sums; this is the test that kills ansätze whose group order is divisible by 3). Of the conjugation-type actions in GL(3,3) and the translation family, exactly three survive both filters, and we publish their specifications: the octahedral group S4 acting by conjugation (31 independent equations; best partition short by 3 effective unknowns, and by 2.26 in the discrete count — the closest-to-balanced symmetric ansatz we have measured); a translation action of C3×C3 (type P1) whose best partition has 9 *more* effective unknowns than equations, the only positive-margin symmetric instance we have found; and a second translation type (P2) short by 1. Two candidate groups cannot act at all: exhaustive search over all 11,232 elements of GL(3,3) shows no element inverts the Singer cycle (so the dihedral group D13 is not realisable over F3), and no element satisfies the dicyclic relations (Q12 likewise). Two further candidates (A4; permutation S3×C2) survive only under a raw parameter count and are excluded under the effective count, which we argue is the correct convention for their action type; both counts are in our record. The census does not cover mixed conjugation × leg-permutation actions beyond the previously studied S3, and a survivor is a specification for a solver system, not evidence that a scheme exists — the S4 and translation systems are being built; the S3 and C13 systems (Items 13 and the Wave 60 design) are already in flight. Symmetric-exclusion results for other groups over ℂ are in the literature (Burichenko).""
+
+**Evidence.** The census pipeline was validated by
+reproducing the earlier waves' numbers exactly (the Γ39
+kill, the involution count, the C13 counts). S4: 31
+equations, 76/103 partitions passing both filters, best
+margin −3 effective, best discrete shortfall 2.26.
+Translation P1: margin +9 effective, shortfall 5.46; P2: −1
+effective, shortfall 6.51. D13: exhaustive over all 11,232
+elements of GL(3,3) — the Singer normaliser (order 78)
+achieves conjugation powers exactly {1,3,9}, zero elements
+invert the Singer cycle, all 144 C13 subgroups conjugate.
+Q12: all 2,600 order-6 elements tested against the Sylvester
+condition. A4 and permutation S3×C2 pass F1 only under the
+raw count and are killed under the effective count, with
+both counts preserved in the record. Full record in
+`data/symmetry-census.md`.
+
+**Scope.** The census covers conjugation-isotropy actions,
+the translation family, and the previously studied
+leg-permuting S3; mixed conjugation × leg-permutation
+actions beyond that S3 are not covered. A survivor is a
+specification, not existence evidence.
+
+**Would overclaim:** "complete census of symmetry groups";
+"C3×C2" anywhere (the group is C3×C3); presenting a
+survivor's margin as existence evidence; "first symmetry
+census".
+
+## Item 32 — the substitution machine: a validated instrument with below-literature bounds
+
+**Claim.** ""We implemented the substitution method for tensor-rank lower bounds in the automated form of Wang (2026) and validated the instrument end-to-end: on ⟨2,2,2⟩ it reproduces Wang's 10 restriction orbits, certifies rank ≥ 7 over both F2 and F3, and its backtracking search then *completes* at target 8 with a negative — the sound answer, since the exact rank is 7. Run on ⟨3,3,3⟩, our implementation certifies rank ≥ 14 over F2 and ≥ 12 over F3. These bounds are **weaker than the published ones** — 19 over any field (Bläser 2003) and at least 21 over F2 (Wang; Yang et al., 2026) — and we publish them only as the instrument's measured reach, with the stall anatomy: our canonicalisation used the monomial subgroup, the restriction lattice grew to 3,389 orbits by dimension 3 (Wang's full-group treatment needs 496 in total), and the budget died before the strong leaves could fire. Closing the gap is a compiled full-group reimplementation, whose specification is in our record. The value of the item is a working, control-validated lower-bound machine whose certificates are checkable line by line — not a bound.""
+
+**Evidence.** Controls over both fields: ⟨2,2,2⟩ yields
+exactly 10 restriction orbits (Wang's count), certifies
+rank ≥ 7 over F2 (1.8 s) and F3 (88 s), and backtracking
+completes negatively at target 8 — the sound answer, the
+exact rank being 7. On ⟨3,3,3⟩ the certified bounds are ≥ 14
+over F2 (a dimension-2 restriction raised 9 → 14 by the
+substitution bootstrap, target 15 completed not-provable;
+242 states carry bounds ≥ 12) and ≥ 12 over F3 (targeted
+certificate; the full F3 lattice run timed out on
+canonicalisation cost). Stall anatomy: monomial-subgroup
+canonicalisation grew the lattice to 3,389 orbits by
+dimension 3 against Wang's 496 in total, so the
+Hopcroft–Kerr leaves never fired. Full record in
+`data/substitution-machine.md`.
+
+**Scope.** A validation/methods item. The published bounds
+are strictly stronger: 19 over any field (Bläser 2003),
+at least 21 over F2 (Wang; Yang et al., 2026).
+
+**Would overclaim:** "we prove rank ≥ 14 / ≥ 12" as a
+headline without the below-literature sentence in the same
+paragraph; citing the 2026 F2 endgame (22; = 23) inside this
+item (it is stated, as others' work, in the release notes'
+literature section); implying the F3 number is the best
+known over F3 (Bläser's 19 holds over F3 too).
+
+## Item 33 — the learned near-partition pattern (labelled speculative bet)
+
+**Claim.** ""Support shapes carry a learnable signature of near-exactness. On a corpus of 7,255 support templates (drop-one supports of our banked exact rank-23 schemes as positives-by-proxy; random menu subsets and fake-scheme drops as negatives), a random forest separates the classes perfectly on a scheme-held-out split (AUC 1.0000), where a reachability-only baseline is at chance (0.5320). The signature: near-exact shapes are sparse near-partitions of the target — about 91% of the entries that must be hit are covered exactly once, overlap between terms is minimal, and almost no coverage is wasted on entries that must stay zero; symmetry/orbit features carry no signal. We state the limit in the same place: the signature is necessary-looking, not sufficient. The model's ten best-scoring new proposals, all passing full reachability, were exact-tested — all ten are provably empty. The pattern's use is as a pre-filter for future template enumerations; it is not a construction, and the positives are proxies (supports of rank-23 schemes minus a term), since no exact rank-22 template exists to train on.""
+
+**Evidence.** Corpus of 7,255 templates, 35 exact features
+each; group-split holdout by scheme (1,779 rows): random
+forest AUC 1.0000 against the reachability-only baseline's
+0.5320, passing the pre-registered +0.02 rule. Pattern
+numbers: nnz/triple 7.0 vs 12.0; 91% of support entries
+covered exactly once (negatives 21%); zero-entry mean
+coverage 0.37 vs 2.20; overlap mean 1.83 vs 5.36; symmetry
+features at importances ≤ 0.00014. Exact tests: 12,000
+mutants → 1,279 reachability-passing → top 10 by score →
+10/10 UNSAT over F3 (0.7–16.6 s). Full record in
+`data/near-partition-pattern.md`.
+
+**Scope.** A pattern statement about this corpus. The
+positives are proxies (supports of rank-23 schemes minus a
+term), since no exact rank-22 template exists to train on;
+part of the separation rides on sparsity, as recorded in the
+data file.
+
+**Would overclaim:** "machine learning finds rank-22
+candidates" (it found none — 10/10 UNSAT is part of the
+claim); quoting AUC 1.0000 without the corpus definition and
+the proxy caveat; "near-partition" as a property of all
+exact schemes.
+
+## Item 34 — GPU evaluator benchmark
+
+**Claim.** ""Our F3 annealing evaluator, ported to an RTX 4070 laptop GPU (CuPy), sustains 172.9 million steps per second on the rank-22-over-F3 annealing workload — about 25× the same machine's compiled CPU annealer and about 1,800× this project's VM CPU baseline. Before any campaign run, the GPU evaluator's wrong-counts were checked against the exact home evaluator on a 16-state battery (16/16 agreement, the home evaluator itself cross-checked against the exact mod-3 judge), and full- assembly recount audits ran clean over ~65 billion cumulative steps. All exact verification remained on CPU throughout: the GPU proposes states; only the exact layer judges them.""
+
+**Evidence.** RTX 4070 Laptop GPU (CuPy): 172.9M steps/s
+(32.30B steps / 186.8 s); laptop CPU (gcc -O2) 6.90M steps/s;
+VM CPU ~96k steps/s — ratios ≈25.1× and ≈1,800×, both
+clearing the pre-registered ≥10× porting rule. The GPU
+evaluator agreed with the exact home evaluator on a 16-state
+battery (16/16; the home evaluator itself cross-checked
+against `checkp.py`), and full-assembly recount audits ran
+clean over ~65 billion cumulative steps. Full record in
+`data/gpu-benchmark.md`.
+
+**Scope.** A benchmark of this evaluator on this workload
+and hardware. All exact verification remained on CPU.
+
+**Would overclaim:** "1,800× speedup" without naming both
+baselines (the honest same-machine figure is 25.1×); any
+implication that GPU throughput bears on the exact searches'
+decidability.
+
 ## Standing scope rules for everything above
 
 - Every UNSAT comes from an encoding validated by a control (the
